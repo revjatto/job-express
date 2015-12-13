@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JobXpress- Get that dream your here!</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+
+  <body>
+
+    <!-- NAV SECTION -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <%= link_to "JobXpress", root_path, class: "logo" %>
+
+                    <ul class="nav navbar-nav navbar">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Registration <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Faith", '#', class: "glyphicon glyphicon-knight" %></li>
+                <li role="separator" class="divider"></li>
+            <li><%= link_to "Prayer", '#', class: "glyphicon glyphicon-heart-empty" %></li>
+            <li role="separator" class="divider"></li>
+
+                <li role="separator" class="divider"></li>
+                <li><%= link_to "About", '#' %></li>
+              </ul>
+            </li>
+          </ul>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><%= link_to "SignIn", '#', class: "glyphicon glyphicon-user" %> </li>
+                       <li><%= link_to "SignUp", '#', class: "glyphicon glyphicon-log-in" %> </li>
+                       <li class="glyphicon glyphicon-user">Welcome:</li>
+                  </ul>
+                </div>
+
+            </div>
+        </div>
+        <br/>
+         <!--END NAV SECTION -->
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+
+    <script src="assets/custom.js"></script>
+
+</body>
+</html>

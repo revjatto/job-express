@@ -1,0 +1,85 @@
+<!--HOME SECTION-->
+    <div id="home-sec">
+
+
+    <div class="container" id="home" >
+        <div class="row text-center g-pad-bottom">
+            <div class="col-md-12">
+
+                <span class="head-main">JobXpress - Get To Work!</span>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4  col-sm-4">
+
+                            <h2 class="btn btn-danger btn-lg text-center">Post-A-Job</h4>
+                            </div>
+
+             <div class="col-md-4  col-sm-4">
+
+                            <h2 class="btn btn-primary btn-lg text-center">Apply-For-A-Job</h4>
+
+                </div>
+            <div class="col-md-4  col-sm-4">
+                  <h2 class="btn btn-warning btn-lg text-center">Upload-Your-CV</h4>
+                </div>
+            </div>
+
+    </div>
+         </div>
+
+  
+    <!--END HOME SECTION-->
+
+    <section  id="services-sec">
+        <div class="container">
+
+            <div class="row pad-top ">
+                <div class="col-md-12">
+                      <div class="col-md-8 col-sm-8">
+		<div class="panel panel-primary">
+                        <div class="panel-heading">
+                          <h2>Current Job Posting</h2>
+		</div>
+		 </div>
+		<div class="panel-body">
+      <% @jobs.each do |job| %>
+
+          <p><%= job.title %></p>
+          <p><%= job.company %></p>
+          <p><%= job.location %></p>
+          <p><%= job.salary %></p>
+          <p><%= job.posted_by %></p>
+          <p><%= job.description %></p>
+          <%= link_to 'Show', job %>
+          <%= link_to 'Edit', edit_job_path(job) %>
+          <%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+      <% end %>
+
+
+
+  <br>
+
+  <%= link_to 'New Job', new_job_path %>
+			</div>
+		 <div class="panel-footer">
+                            Panel Footer
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+		<div class="panel panel-danger">
+                        <div class="panel-heading">
+                    <h2>Advert goes here!</h2>
+	     </div>
+                </div>
+                    <p>
+
+                    </p>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
