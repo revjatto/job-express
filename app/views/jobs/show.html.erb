@@ -1,34 +1,56 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="well">
+   <div class="panel panel-primary">
+  <div class="panel-heading">
+  <h2>Job details</h2>
+		</div>
+		 </div>
+		<div class="panel-body">
 
-<p>
+<p class="glyphicon glyphicon-thumbs-up">
   <strong>Title:</strong>
   <%= @job.title %>
-</p>
+</p><br/>
 
-<p>
+<p class="glyphicon glyphicon-knight">
   <strong>Company:</strong>
   <%= @job.company %>
-</p>
+</p><br/>
 
-<p>
+<p class="glyphicon glyphicon-heart-empty">
   <strong>Location:</strong>
   <%= @job.location %>
-</p>
+</p><br/>
 
-<p>
+<p class="glyphicon glyphicon-heart-empty">
   <strong>Salary:</strong>
   <%= @job.salary %>
-</p>
+</p><br/>
 
-<p>
+<p class="glyphicon glyphicon-heart-empty">
   <strong>Posted by:</strong>
   <%= @job.posted_by %>
-</p>
+</p><br/>
 
 <p>
-  <strong>Description:</strong>
-  <%= @job.description %>
+  <strong>Job Details:</strong>
+  <%= @job.description.html_safe %>
 </p>
+<br/>
+<strong>Nearly there!</strong>
+
+
+<p>We're taking you to the employer's website so you can complete the application process.
+
+Please note that this step must be completed for your application to be considered.</p>
+
+<p>If you're not redirected automatically, you can find the link to the employer's website below:</p>
 
 <%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+<%= link_to 'Destroy', job_path, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Back', jobs_path %><br/>
+<p></p>
+<%= link_to 'Apply for This Job', '#', class: 'btn btn-warning btn-lg text-center' %>
+</div>
+</div>
+</div>
