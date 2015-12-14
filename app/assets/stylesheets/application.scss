@@ -1,6 +1,4 @@
 
-
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "style";
@@ -30,4 +28,7 @@ margin-right: auto;
 background-color:#A9A9A9;
 color:#A9A9A9;
 border: 0 none;
+}
+.social-network li{
+  list-style-type: none;
 }
