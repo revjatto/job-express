@@ -1,10 +1,19 @@
 <%= tinymce_assets %>
  <%= tinymce %>
-<div class="container">
-  <div class="well">
+ <div class="container">
+   <div class="well">
+    <div class="panel panel-primary">
+   <div class="panel-heading">
+   <h2>Create New Job</h2>
+   <p>Please reload the form before you start creating the job. Many thanks</p>
+ 		</div>
+ 		 </div>
+ 		<div class="panel-body">
 
 <%= render 'form' %>
 
+<%= link_to 'Show', @job %> |
 <%= link_to 'Back', jobs_path %>
+</div>
 </div>
 </div>

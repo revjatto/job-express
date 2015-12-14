@@ -1,13 +1,6 @@
 <%= tinymce_assets %>
  <%= tinymce %>
-<div class="container">
-  <div class="well">
-   <div class="panel panel-primary">
-  <div class="panel-heading">
-  <h2>Create A New Job</h2>
-		</div>
-		 </div>
-		<div class="panel-body">
+
 <%= form_for(@job) do |f| %>
   <% if @job.errors.any? %>
     <div id="error_explanation">
@@ -50,5 +43,3 @@
     <%= f.submit %>
   </div>
 <% end %>
-  </div>
-    </div>
