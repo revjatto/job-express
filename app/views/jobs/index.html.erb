@@ -20,10 +20,11 @@
           </div>
   <div class="col-md-4  col-sm-4">
   <h2><%= link_to 'Upload-Your-CV', new_user_session_path, class: 'btn btn-success btn-lg text-center' %></h2>
-</div>
-</div>
-</div>
-</div>
+</div><!--end of col-md-4 -->
+  
+</div><!-- end of row text-center-->
+  </div>
+</div><!-- end of home-sec-->
 
 
     <!--END HOME SECTION-->
@@ -46,6 +47,7 @@
 
     <p><%= job.location %></p>
     <p><%= job.salary %></p>
+     <p class="time"><strong>Date Created:</strong> <%= job.created_at.strftime("%B %d, %Y") %></p>
     <hr/>
       <% end %>
   			</div>

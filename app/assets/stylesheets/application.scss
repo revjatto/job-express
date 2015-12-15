@@ -1,8 +1,27 @@
-
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "style";
 @import "font-awesome.min";
+@import "flexslider.css";
+
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  height: 100%;
+}
+
+.navbar-brand {
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-size: 1.8em;
+	font-weight: 300;
+	color: #1D976C !important;
+}
 
 .logo {
   float: left;
